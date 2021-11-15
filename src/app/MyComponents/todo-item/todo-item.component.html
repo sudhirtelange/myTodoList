@@ -1,0 +1,19 @@
+<div class="my-3">
+  <div class="window">
+    <span class="status">Status: {{todo.status}}</span>
+    <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}} </h5> 
+    <p [ngClass]="{'strike': !todo.active}"> {{todo.desc}}</p>
+    <!-- <div class="mb-3 "> -->
+      <!-- <input type="checkbox"
+        class="form-check-input" 
+        id="todo{{i}}"
+        (click)="onCheckboxClick(todo)"
+        [checked]="!todo.active">
+        <label class="form-check-label" for="todo{{i}}">Done!</label>
+      </div> -->
+      
+      <button type="button" class="btn btn-sm btn-secondary" (click)="statuspending(todo)" [disabled]="!todo.active">Pending</button>
+      <button type="button" class="btn btn-sm btn-info" (click)="statusprogress(todo)" [disabled]="!todo.active">In Progress</button>
+      <button type="button" class="btn btn-sm btn-success"(click)="onCheckboxClick(todo)" [disabled]="!todo.active">Completed!!</button>
+      <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(todo)" >Delete</button>
+    </div>

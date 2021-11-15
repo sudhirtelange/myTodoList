@@ -1,0 +1,21 @@
+.strike{
+    text-decoration: line-through;
+}
+.btn{
+    margin: 5px;
+}
+.my-3{
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+
+}
+.window{
+    margin: 30px;
+}
+.status{
+    position: relative;
+    display: inline;
+    left: 81%;
+}
